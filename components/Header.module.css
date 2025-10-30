@@ -1,0 +1,20 @@
+
+
+.header {
+  /* Layout */
+  width: 100%;
+  padding: 2rem 4rem; /* Adjust padding as needed */
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* Left, Center, Right columns */
+  align-items: center;
+  gap: 2rem;
+
+  /* Positioning */
+  position: fixed; /* Sticks to the top */
+  top: 0;
+  left: 0;
+  z-index: 100; /* Sits on top of your 3D scene */
+
+  /* Styling */
+  color: #080808; /* Assumes a dark background */
+}
