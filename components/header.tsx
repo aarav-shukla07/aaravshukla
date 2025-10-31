@@ -16,7 +16,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* === UPDATED NAVIGATION === */}
-      <nav className={`${splinesansmono.className} flex justify-center gap-10 text-sm`}>
+      <nav className={`${splinesansmono.className} flex justify-center gap-20 text-sm`}>
         
         {/* --- LINK 1: ABOUT ME --- */}
         <Link 
