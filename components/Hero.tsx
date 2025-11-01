@@ -12,17 +12,13 @@ const Hero: React.FC = () => {
           The `styles.title` class makes it sit on top.
       */}
       <h1 className={`${styles.title} ${sofiasanscondensed.className}`}>
-        <span className="block">TECHNOLOGY</span>
-        {/* <span className="block">POLYMATH</span> */}
+        <span className="block">TECHNOLOGYPOLYMATH</span>
       </h1>
 
-      {/* --- Small Text (Top Left) --- */}
-      <span className={`${styles.smallText} ${styles.number} ${splinesansmono.className}`}>
-        1.618
-      </span>
-
+      
+      
       {/* --- Skills List (Bottom Left) --- */}
-      <div className={`${styles.skills} ${splinesansmono.className} text-black/70`}>
+      <div className={`${styles.skills} ${sofiasanscondensed.className} text-black`}>
         <span className="block">/ FULL-STACK WEB</span>
         <span className="block">/ AI & ML</span>
         <span className="block">/ WEB3 & DEVOPS</span>
@@ -31,18 +27,22 @@ const Hero: React.FC = () => {
       {/* --- Image (Middle) --- */}
       {/* This container sits behind the title text. */}
       <div className={styles.imageContainer}>
-        {/* <Image
-          src="https://placehold.co/600x800/222222/white?text=AARAV"
+        <Image
+          src="/olha3.jpg"
           alt="Aarav Shukla"
-          width={600}
-          height={800}
+          width={300}
+          height={500}
           className={styles.image}
-        /> */}
+        />
       </div>
 
       {/* --- Location (Bottom Right) --- */}
-      <div className={`${styles.smallText} ${styles.location} ${splinesansmono.className} text-white/70`}>
-        BASED IN INDIA
+      <div className={`${styles.smallText} ${styles.location} ${splinesansmono.className} text-black`}>
+        B A S E D &nbsp; I N &nbsp; I N D I A
+      </div>
+
+      <div className={`${styles.description} ${splinesansmono.className}`}>
+        I'M A FULL-SPECTRUM DEVELOPER, ENGINEERING ROBUST AND INTELLIGENT APPLICATIONS FROM CONCEPT TO DEPLOYMENT.
       </div>
     </section>
   );
