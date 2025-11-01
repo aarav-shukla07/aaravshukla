@@ -1,0 +1,86 @@
+/* This file creates the complex, overlapping grid layout. 
+  It's the professional way to handle a design this specific.
+*/
+
+.heroGrid {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 equal columns */
+  grid-template-rows: auto 1fr auto; /* 3 rows: top-auto, middle-fill, bottom-auto */
+  align-items: end; /* Aligns items to the bottom of their cell by default */
+  color: black;
+  overflow: hidden; /* Prevents text from leaking */
+}
+
+/* --- THE GIANT TITLE --- */
+.title {
+  grid-column: 1 / -1; /* Span all 4 columns */
+  grid-row: 1 / 3; /* Span first 2 rows */
+  font-size: clamp(4rem, 15vw, 18rem); /* Responsive font size */
+  font-weight: 900;
+  letter-spacing: -0.02em; /* Tightens text */
+  line-height: 0.85; /* Stacks the words tightly */
+  text-transform: uppercase;
+  z-index: 10; /* Sits ON TOP of the image */
+  position: relative; /* Needed for z-index */
+  align-self: start; /* Overrides grid align-items to stick to the top */
+  padding-top: 5vh; /* Pushes it down a bit from the top */
+}
+
+/* --- THE IMAGE --- */
+.imageContainer {
+  grid-column: 3 / 5; /* Start on 3rd col, end on the 5th line (spans 2) */
+  grid-row: 1 / 4; /* Span all 3 rows */
+  z-index: 1; /* Sits BEHIND the title */
+  position: relative;
+  align-self: end; /* Sticks to the bottom */
+  
+  /* A subtle fade at the top/left to blend with text */
+  mask-image: linear-gradient(
+    to bottom right, 
+    transparent 0%, 
+    black 30%
+  );
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* --- SMALL TEXT (Shared) --- */
+.smallText {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 20; /* Sits on top of everything */
+  position: relative;
+}
+
+.number {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-self: start;
+}
+
+.location {
+  grid-column: 4 / 5; /* Last column */
+  grid-row: 3 / 4; /* Last row */
+  justify-self: end; /* Aligns to the far right */
+}
+
+/* --- SKILLS --- */
+.skills {
+  grid-column: 2 / 3; /* Second column */
+  grid-row: 3 / 4; /* Last row */
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 20;
+  position: relative;
+}
