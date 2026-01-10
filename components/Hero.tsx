@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
       {/* This container sits behind the title text. */}
       <div className={styles.imageContainer}>
         <Image
-          src="/olha3.jpg"
+          src="/aarav.jpg"
           alt="Aarav Shukla"
           width={300}
           height={500}
